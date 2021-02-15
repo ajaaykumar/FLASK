@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+
+<form method="post">
+    <div>
+        <table>
+            <th><h3>Enter Your Product Details</h3></th>
+            <tr>
+                <td><input type="text" name="Product" placeholder="Product name"></td>
+                <td><input type="number" name="pnumber" placeholder="Quantity"></td>
+                <td><input type="submit"></td>
+            </tr>
+        </table>
+</div>
+</form>
+<br>
+<a href="{{ url_for("show_all") }}">Details</a>
+
+</body>
+</html>

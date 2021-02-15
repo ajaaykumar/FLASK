@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>update</title>
+</head>
+<body>
+{% for Detail in Details%}
+{#  <p>{{Detail.name}}</p>#}
+  <form method="POST" action="/update">
+{#      <input type="hidden" value="{{ Detail.name }}" name="oldtitle">#}
+
+      <input type="text" value="{{ Detail.name }}" name="Product" autocomplete="off" required>
+
+      <input type="number" value="{{ Detail.quantity }}" name="pnumber" autocomplete="off" required>
+
+      <input name="id" value="{{ Detail.id }}" type="hidden">
+
+      <input type="submit" value="Update">
+
+  </form>
+
+{% endfor %}
+<br>
+<a href="{{ url_for("show_all") }}">view Details </a><br>
+</body>
+</html>

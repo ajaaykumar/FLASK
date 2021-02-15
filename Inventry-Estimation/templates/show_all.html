@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+<body>
+
+<table align="center">
+    <th>Product</th>
+    <th>Quantity</th>
+{% for x in result %}
+    <tr>
+        <td>{{ x.name }}</td>
+        <td>{{ x.quantity }}</td>
+    </tr>
+{% endfor %}
+</table>
+<br>
+<a href="{{ url_for("update_addr") }}">Update Details </a><br>
+<a href="{{ url_for("homepage") }}">Home</a><br>
+
+</body>
+</html>
