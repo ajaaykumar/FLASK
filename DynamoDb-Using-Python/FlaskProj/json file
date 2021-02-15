@@ -1,0 +1,81 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "student application",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PauseIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ResumeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "StudentDetails",
+                    "slots": [
+                        {
+                            "name": "RollNo",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "{RollNo} details",
+                        "Provide {RollNo} student details"
+                    ]
+                },
+                {
+                    "name": "FeeDetails",
+                    "slots": [
+                        {
+                            "name": "fRollno",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "fee details of {fRollno} student",
+                        "Provide {fRollno} student fee details",
+                        "fee details of {fRollno}",
+                        "{fRollno} fee details"
+                    ]
+                },
+                {
+                    "name": "AttendanceDetails",
+                    "slots": [
+                        {
+                            "name": "aRollNo",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "{aRollNo} Attendance Details",
+                        "Provide {aRollNo} student Attendance details",
+                        "Attendance details of {aRollNo}",
+                        "provide {aRollNo}  Attendance details"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}
