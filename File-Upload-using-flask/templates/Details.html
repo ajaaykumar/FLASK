@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+{#    <link rel="stylesheet" type= "text/css" href="../static/css/style.css">#}
+    <style>
+        #first
+        {
+            background-color: powderblue;
+            border-style: solid;
+            border-width: medium;
+  	        border-radius: 8px;
+
+            margin-top: 200px;
+            margin-bottom: 320px;
+            margin-right: 120px;
+            margin-left: 450px;
+
+            padding-top: 2px;
+            padding-bottom: 50px;
+
+            height: 280px;
+            width: 205px;
+        }
+        img
+        {
+            border-radius: 8px;
+        }
+
+        #topindex
+        {
+            text-align: center;
+	        background-color: powderblue;
+	        padding-top: 0.5px;
+  	        padding-bottom: 0px;
+        }
+
+        #Footer
+        {
+            background-color: green;
+            text-align: center;
+        }
+        div.tr,td,th
+        {
+         font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+{% for x  in result %}
+    <div id="first">
+        <div id="topindex">
+            <h4>CLOUDINDOJO</h4>
+        </div>
+
+	<div align="center">
+		 <img width="90" height="100" src="{{ url_for('send_file', filename=x['imagename']) }}">
+	</div>
+        <div>
+            <table align="center">
+                <tr>
+                    <th>ID:</th>
+                    <td>{{ x['id']}}</td>
+                </tr>
+                <tr>
+                    <th>Name :</th>
+                    <td>{{x['name']}}</td>
+                </tr>
+                <tr>
+                    <th>Mobile :</th>
+                    <td>{{x['mobile']}}</td>
+                </tr>
+                <tr>
+                    <th>Email Id :</th>
+                    <td>{{x['email']}}</td>
+                </tr>
+            </table>
+            <div align="center">
+                <img width="120" height="30" align="center" alt="Barcoded value 1234567890" src="http://bwipjs-api.metafloor.com/?bcid=code128&text={{ x['id'] }}&includetext">
+            </div>
+            <div id="Footer">
+                <p>Somajiguda Hyderabad-500018</p>
+        	</div>
+    </div>
+</div>
+{% endfor %}
+</body>
+</html>
+
+
+
+
